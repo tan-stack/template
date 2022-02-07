@@ -1,0 +1,105 @@
+{
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "cli": {
+        "cache": {
+            "enabled": true,
+            "environment": "all",
+            "path": "./node_modules/.angular-cache"
+        }
+    },
+    "defaultProject": "app",
+    "newProjectRoot": "projects",
+    "projects": {
+        "app": {
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-angular:browser",
+                    "configurations": {
+                        "development": {
+                            "buildOptimizer": false,
+                            "extractLicenses": false,
+                            "namedChunks": true,
+                            "optimization": false,
+                            "sourceMap": true,
+                            "vendorChunk": true
+                        },
+                        "production": {
+                            "budgets": [
+                                {
+                                    "maximumError": "1mb",
+                                    "maximumWarning": "500kb",
+                                    "type": "initial"
+                                },
+                                {
+                                    "maximumError": "4kb",
+                                    "maximumWarning": "2kb",
+                                    "type": "anyComponentStyle"
+                                }
+                            ],
+                            "fileReplacements": [
+                                {
+                                    "replace": "app/src/environments/environment.ts",
+                                    "with": "app/src/environments/environment.prod.ts"
+                                }
+                            ],
+                            "outputHashing": "all"
+                        }
+                    },
+                    "defaultConfiguration": "production",
+                    "options": {
+                        "assets": [
+                            "app/src/assets"
+                        ],
+                        "extractLicenses": false,
+                        "index": "app/src/index.html",
+                        "inlineStyleLanguage": "scss",
+                        "main": "app/src/main.ts",
+                        "outputPath": "dist/app",
+                        "polyfills": "app/src/polyfills.ts",
+                        "scripts": [],
+                        "styles": [
+                            "app/src/styles.scss"
+                        ],
+                        "tsConfig": "app/tsconfig.json"
+                    }
+                },
+                "extract-i18n": {
+                    "builder": "@angular-devkit/build-angular:extract-i18n",
+                    "options": {
+                        "browserTarget": "app:build"
+                    }
+                },
+                "serve": {
+                    "builder": "@angular-devkit/build-angular:dev-server",
+                    "configurations": {
+                        "development": {
+                            "browserTarget": "app:build:development"
+                        },
+                        "production": {
+                            "browserTarget": "app:build:production"
+                        }
+                    },
+                    "defaultConfiguration": "development",
+                    "options": {
+                        "proxyConfig": "app/proxy.conf.json"
+                    }
+                }
+            },
+            "prefix": "app",
+            "projectType": "application",
+            "root": "",
+            "schematics": {
+                "@schematics/angular:application": {
+                    "skipTests": true,
+                    "strict": true
+                },
+                "@schematics/angular:component": {
+                    "skipTests": true,
+                    "style": "scss"
+                }
+            },
+            "sourceRoot": "app/src"
+        }
+    },
+    "version": 1
+}

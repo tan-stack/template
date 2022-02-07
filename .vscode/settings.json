@@ -1,0 +1,17 @@
+{
+    "beautify.config": {
+        "css": {
+            "newline_between_rules": false,
+            "preserve_newlines": false,
+            "selector_separator_newline": true
+        }
+    },
+    "editor.detectIndentation": false,
+    "editor.tabSize": 4,
+    "editor.wordWrap": "off",
+    "files.encoding": "utf8",
+    "files.eol": "\n",
+    "files.insertFinalNewline": true,
+    "html.format.wrapLineLength": 0,
+    "typescript.tsdk": "./node_modules/typescript/lib"
+}

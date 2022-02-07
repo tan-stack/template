@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "declaration": false,
+        "module": "commonjs",
+        "outDir": "../dist/out-tsc/api"
+    },
+    "exclude": [
+        "node_modules",
+        "dist"
+    ],
+    "extends": "../tsconfig.base.json",
+    "include": [
+        "src/**/*"
+    ]
+}

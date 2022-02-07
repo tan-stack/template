@@ -1,0 +1,24 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "baseUrl": "./",
+        "declaration": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "forceConsistentCasingInFileNames": false,
+        "incremental": true,
+        "newLine": "lf",
+        "noFallthroughCasesInSwitch": false,
+        "noImplicitAny": false,
+        "outDir": "./dist/out-tsc",
+        "paths": {},
+        "removeComments": true,
+        "skipLibCheck": true,
+        "sourceMap": true,
+        "strict": true,
+        "strictBindCallApply": false,
+        "strictNullChecks": false,
+        "target": "es2017"
+    }
+}
