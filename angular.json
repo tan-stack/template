@@ -1,0 +1,114 @@
+{
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "cli": {
+        "cache": {
+            "enabled": true,
+            "environment": "all",
+            "path": "./node_modules/.angular-cache"
+        }
+    },
+    "newProjectRoot": "projects",
+    "projects": {
+        "app": {
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-angular:browser-esbuild",
+                    "configurations": {
+                        "development": {
+                            "extractLicenses": false,
+                            "optimization": false,
+                            "sourceMap": true
+                        },
+                        "production": {
+                            "budgets": [
+                                {
+                                    "maximumError": "1mb",
+                                    "maximumWarning": "500kb",
+                                    "type": "initial"
+                                },
+                                {
+                                    "maximumError": "4kb",
+                                    "maximumWarning": "2kb",
+                                    "type": "anyComponentStyle"
+                                }
+                            ],
+                            "outputHashing": "all"
+                        }
+                    },
+                    "defaultConfiguration": "production",
+                    "options": {
+                        "assets": [
+                            "app/src/assets"
+                        ],
+                        "extractLicenses": false,
+                        "index": "app/src/index.html",
+                        "inlineStyleLanguage": "scss",
+                        "main": "app/src/main.ts",
+                        "outputPath": "dist/app",
+                        "polyfills": [
+                            "zone.js"
+                        ],
+                        "scripts": [],
+                        "styles": [
+                            "app/src/styles.scss"
+                        ],
+                        "tsConfig": "app/tsconfig.app.json"
+                    }
+                },
+                "extract-i18n": {
+                    "builder": "@angular-devkit/build-angular:extract-i18n",
+                    "options": {
+                        "buildTarget": "app:build"
+                    }
+                },
+                "serve": {
+                    "builder": "@angular-devkit/build-angular:dev-server",
+                    "configurations": {
+                        "development": {
+                            "buildTarget": "app:build:development"
+                        },
+                        "production": {
+                            "buildTarget": "app:build:production"
+                        }
+                    },
+                    "defaultConfiguration": "development",
+                    "options": {
+                        "proxyConfig": "app/proxy.conf.json"
+                    }
+                }
+            },
+            "prefix": "app",
+            "projectType": "application",
+            "root": "",
+            "schematics": {
+                "@schematics/angular:class": {
+                    "skipTests": true
+                },
+                "@schematics/angular:component": {
+                    "skipTests": true,
+                    "style": "scss"
+                },
+                "@schematics/angular:directive": {
+                    "skipTests": true
+                },
+                "@schematics/angular:guard": {
+                    "skipTests": true
+                },
+                "@schematics/angular:interceptor": {
+                    "skipTests": true
+                },
+                "@schematics/angular:pipe": {
+                    "skipTests": true
+                },
+                "@schematics/angular:resolver": {
+                    "skipTests": true
+                },
+                "@schematics/angular:service": {
+                    "skipTests": true
+                }
+            },
+            "sourceRoot": "app/src"
+        }
+    },
+    "version": 1
+}

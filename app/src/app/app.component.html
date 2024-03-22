@@ -1,0 +1,7 @@
+<h1>TAN Stack Works!</h1>
+<button (click)="onApiClick();">Request API</button>
+@if ( apiRes() ) {
+<div>
+    response from API: {{ apiRes() }}
+</div>
+}

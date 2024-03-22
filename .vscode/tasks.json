@@ -1,0 +1,24 @@
+{
+    "tasks": [
+        {
+            "isBackground": true,
+            "problemMatcher": {
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": {
+                        "regexp": "(.*?)"
+                    },
+                    "endsPattern": {
+                        "regexp": "Compiled | Failed to compile."
+                    }
+                },
+                "owner": "typescript",
+                "pattern": "$tsc",
+                "source": "ts"
+            },
+            "script": "start",
+            "type": "npm"
+        }
+    ],
+    "version": "2.0.0"
+}

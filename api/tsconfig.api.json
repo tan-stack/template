@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "declaration": false,
+        "emitDecoratorMetadata": true,
+        "incremental": true,
+        "module": "commonjs",
+        "outDir": "../dist/api",
+        "target": "es2021"
+    },
+    "exclude": [
+        "node_modules",
+        "dist"
+    ],
+    "extends": "../tsconfig.base.json",
+    "files": [
+        "./src/main.ts"
+    ],
+    "include": [
+        "../typings.d.ts",
+        "./src/*/*.ts"
+    ]
+}

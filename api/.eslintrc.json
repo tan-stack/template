@@ -1,0 +1,9 @@
+{
+    "extends": "@ts-all",
+    "parserOptions": {
+        "project": [
+            "./api/tsconfig.api.json"
+        ]
+    },
+    "root": true
+}

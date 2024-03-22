@@ -1,0 +1,30 @@
+{
+    "angularCompilerOptions": {
+        "enableI18nLegacyMessageIdFormat": false,
+        "strictInjectionParameters": true,
+        "strictInputAccessModifiers": true,
+        "strictTemplates": true
+    },
+    "compilerOptions": {
+        "esModuleInterop": true,
+        "importHelpers": true,
+        "lib": [
+            "es2022",
+            "dom"
+        ],
+        "module": "es2022",
+        "moduleResolution": "bundler",
+        "outDir": "../dist/app/out-tsc",
+        "target": "es2022",
+        "types": [],
+        "useDefineForClassFields": false
+    },
+    "extends": "../tsconfig.base.json",
+    "files": [
+        "src/main.ts"
+    ],
+    "include": [
+        "../typings.d.ts",
+        "src/**/*.ts"
+    ]
+}

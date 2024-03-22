@@ -1,0 +1,13 @@
+{
+    "extends": "@ng-all",
+    "parserOptions": {
+        "project": [
+            "./app/tsconfig.app.json"
+        ]
+    },
+    "root": true,
+    "rules": {
+        "@angular-eslint/template/no-call-expression": "off",
+        "@angular-eslint/use-injectable-provided-in": "off"
+    }
+}

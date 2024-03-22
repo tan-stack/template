@@ -1,0 +1,12 @@
+{
+    "configurations": [
+        {
+            "name": "ng serve",
+            "preLaunchTask": "npm: start",
+            "request": "launch",
+            "type": "pwa-chrome",
+            "url": "http://localhost:4200/"
+        }
+    ],
+    "version": "0.2.0"
+}
